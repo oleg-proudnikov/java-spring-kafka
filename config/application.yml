@@ -1,1 +1,19 @@
 server.port: 8010
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+#  listener:
+#    ack-mode: manual_immediate
+    producer:
+      topic: intx.text
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      retries: 3
+#      acks: 1
+    consumer:
+      groupId: intx
+      topic: intx.text
+#    enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
