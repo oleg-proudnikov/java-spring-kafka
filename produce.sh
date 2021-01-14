@@ -1,3 +1,7 @@
+#
+# https://github.com/apache/kafka/blob/trunk/tools/src/main/java/org/apache/kafka/tools/VerifiableProducer.java
+#
+
 SERVER=localhost:9092
 TOPIC=intx.text
 CNT=5000000
